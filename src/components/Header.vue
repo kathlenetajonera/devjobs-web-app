@@ -5,7 +5,7 @@ import Container from './Layout/Container.vue';
 </script>
 
 <template>
-    <div class="bg-header bg-no-repeat bg-cover h-40">
+    <div class="bg-header bg-no-repeat bg-cover bg-left-bottom h-40">
         <Container>
             <div class="flex justify-between items-center pt-11">
                 <Logo />

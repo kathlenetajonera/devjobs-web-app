@@ -3,7 +3,7 @@ import Button from './components/Button.vue';
 import Card from './components/Card.vue';
 import Header from './components/Header.vue';
 import Container from './components/Layout/Container.vue';
-import SearchBar from './components/SearchBar.vue';
+import SearchBar from './components/SearchBar/SearchBar.vue';
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import SearchBar from './components/SearchBar.vue';
         <Container>
             <SearchBar />
 
-            <div class="grid grid-cols-cards gap-6 gap-y-12 my-14">
+            <div class="grid grid-cols-cards gap-6 gap-y-14 my-14 lg:gap-x-3 md:gap-y-12">
                 <Card />
                 <Card />
                 <Card />
