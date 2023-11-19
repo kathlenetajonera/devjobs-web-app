@@ -30,7 +30,8 @@ module.exports = {
                 violet: '#5964e0',
                 gray: '#e8e8ea',
                 'light-gray': '#f5f6f8',
-                'dark-gray': '#c1c0c4'
+                'dark-gray': '#c1c0c4',
+                overlay: 'rgba(0,0,0,0.5)'
             },
             backgroundImage: {
                 header: "url( '/src/assets/patterns/bg-pattern-header-desktop.svg')"
