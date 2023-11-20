@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import logo from '../assets/logos/blogr.svg';
+import HeadingTwo from './Typography/HeadingTwo.vue';
+import Paragraph from './Typography/Paragraph.vue';
+import ColoredText from './Typography/ColoredText.vue';
 </script>
 
 <template>
-    <div class="relative bg-white p-8 pt-12 rounded-md">
+    <router-link to="/job" class="relative bg-white p-8 pt-12 rounded-md">
         <div class="absolute top-0 -translate-y-1/2">
             <span
                 class="inline-flex items-center justify-center bg-violet w-[3.125rem] h-[3.125rem] rounded-2xl"
@@ -14,15 +17,15 @@ import logo from '../assets/logos/blogr.svg';
 
         <div class="mb-10">
             <div class="flex">
-                <p class="text-body">5h ago</p>
+                <Paragraph>5h ago</Paragraph>
                 <span class="text-body mx-2">•</span>
-                <p class="text-body">Full Time</p>
+                <Paragraph>Full Time</Paragraph>
             </div>
 
-            <h2 class="text-black text-xl leading-none font-bold my-4">Senior Software Engineer</h2>
-            <p>Scoot</p>
+            <HeadingTwo>Senior Software Engineer</HeadingTwo>
+            <Paragraph>Scoot</Paragraph>
         </div>
 
-        <p class="text-violet text-sm font-bold">United Kingdom</p>
-    </div>
+        <ColoredText>United Kingdom</ColoredText>
+    </router-link>
 </template>
