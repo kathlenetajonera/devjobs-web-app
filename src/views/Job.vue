@@ -9,7 +9,6 @@ import ColoredText from '../components/Typography/ColoredText.vue';
 import UnorderedList from '../components/Typography/UnorderedList.vue';
 import OrderedList from '../components/Typography/OrderedList.vue';
 import Button from '../components/Button.vue';
-import logo from '../assets/logos/scoot.svg';
 </script>
 
 <template>

@@ -12,6 +12,6 @@ const { windowWidth } = useWindowResize();
         :placeholder="
             windowWidth < 1024 ? 'Filter by title...' : 'Filter by title, companies, expertise...'
         "
-        class="text-sm text-dark-gray flex-1 outline-none bg-transparent px-4 sm:w-full"
+        class="text-sm text-black placeholder:text-dark-gray flex-1 outline-none bg-transparent px-4 sm:w-full"
     />
 </template>

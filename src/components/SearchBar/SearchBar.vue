@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import FilterText from './FilterText.vue';
 import FilterLocation from './FilterLocation.vue';
 import FullTimeToggle from './FullTimeToggle.vue';
@@ -7,12 +7,26 @@ import ButtonIcon from '../ButtonIcon.vue';
 import IconFilter from '../Icons/IconFilter.vue';
 import IconSearch from '../Icons/IconSearch.vue';
 import Button from '../Button.vue';
+import type { JobType, JobsArrayType } from '@/types/jobTypes';
 
 const showFilterModal = ref(false);
 
 const toggleFilterModal = () => {
     showFilterModal.value = !showFilterModal.value;
 };
+
+const handleSearch = () => {
+    console.log('handle search');
+};
+
+const props = defineProps<{
+    jobs: JobsArrayType;
+}>();
+
+const jobLocations = computed(() => {
+    const locations = props.jobs.map((job: JobType) => job.location);
+    return [...new Set(locations)];
+});
 </script>
 
 <template>
@@ -30,11 +44,11 @@ const toggleFilterModal = () => {
             </div>
         </div>
         <div class="flex-1 flex items-center border-x-[1px] border-x-gray px-6 lg:px-4 md:hidden">
-            <FilterLocation />
+            <FilterLocation :locations="jobLocations" />
         </div>
         <div class="flex-1 flex items-center justify-between pl-6 md:hidden">
             <FullTimeToggle />
-            <Button />
+            <Button label="Search" :onClick="handleSearch" />
         </div>
     </div>
     <div
@@ -51,13 +65,13 @@ const toggleFilterModal = () => {
             ]"
         >
             <div class="border-b-[1px] border-b-gray p-6">
-                <FilterLocation />
+                <FilterLocation :locations="jobLocations" />
             </div>
             <div class="p-6">
                 <span class="block pb-6">
                     <FullTimeToggle />
                 </span>
-                <Button />
+                <Button label="Search" :onClick="handleSearch" />
             </div>
         </div>
     </div>
