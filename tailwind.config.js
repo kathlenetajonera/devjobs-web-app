@@ -28,6 +28,7 @@ module.exports = {
                 body: '#6e8098',
                 black: '#19202d',
                 violet: '#5964e0',
+                'light-violet': '#eeeffc',
                 gray: '#e8e8ea',
                 'light-gray': '#f5f6f8',
                 'dark-gray': '#c1c0c4',

@@ -18,6 +18,7 @@ const jobs = ref(data);
                 <Card
                     v-for="job in jobs"
                     :key="job.id"
+                    :id="job.id"
                     :logo="job.logo"
                     :logoBackground="job.logoBackground"
                     :postedAt="job.postedAt"

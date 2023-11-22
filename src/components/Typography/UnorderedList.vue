@@ -1,24 +1,16 @@
+<script setup lang="ts">
+defineProps<{
+    list: string[];
+}>();
+</script>
+
 <template>
     <ul class="text-body my-8">
-        <li
-            class="flex items-center mb-3 before:content-[''] before:block before:w-1 before:h-1 before:bg-violet before:rounded-full before:mr-[36px]"
-        >
-            Lorem ipsum dolor sit amet.
-        </li>
-        <li
-            class="flex items-center mb-3 before:content-[''] before:block before:w-1 before:h-1 before:bg-violet before:rounded-full before:mr-[36px]"
-        >
-            Lorem ipsum dolor sit amet.
-        </li>
-        <li
-            class="flex items-center mb-3 before:content-[''] before:block before:w-1 before:h-1 before:bg-violet before:rounded-full before:mr-[36px]"
-        >
-            Lorem ipsum dolor sit amet.
-        </li>
-        <li
-            class="flex items-center mb-3 before:content-[''] before:block before:w-1 before:h-1 before:bg-violet before:rounded-full before:mr-[36px]"
-        >
-            Lorem ipsum dolor sit amet.
-        </li>
+        <div v-for="item in list" class="mb-3 flex">
+            <span class="inline-flex w-10 mt-2 md:w-6">
+                <span class="inline-block w-1.5 h-1.5 bg-violet rounded-full" />
+            </span>
+            <p class="flex-1">{{ item }}</p>
+        </div>
     </ul>
 </template>
