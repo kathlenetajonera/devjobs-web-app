@@ -4,7 +4,7 @@ import Job from '../views/Job.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '/devjobs-web-app/',
         name: 'Home',
         component: Home
     },
