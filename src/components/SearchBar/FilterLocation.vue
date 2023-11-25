@@ -14,8 +14,8 @@ defineEmits(['update:location']);
 
         <select
             :class="[
-                location ? 'text-black' : 'text-dark-gray',
-                'text-sm px-4 bg-transparent appearance-none outline-none'
+                location ? 'text-black dark:text-white' : 'text-dark-gray',
+                'text-sm px-4 bg-transparent appearance-none outline-none transition-colors'
             ]"
             :value="location"
             @input="$emit('update:location', ($event.target as HTMLInputElement).value)"

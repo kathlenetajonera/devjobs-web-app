@@ -48,7 +48,7 @@ const filterData = (filters: FiltersType) => {
 </script>
 
 <template>
-    <div class="bg-light-gray min-h-screen pb-20">
+    <div class="bg-light-gray dark:bg-dark transition-[background] min-h-[calc(100vh-160px)] pb-20">
         <Container>
             <SearchBar :jobLocations="jobLocations" @search="filterData" />
 

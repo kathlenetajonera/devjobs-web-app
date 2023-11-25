@@ -3,6 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
     content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    darkMode: 'class',
     theme: {
         screens: {
             '2xl': { max: '1535px' },
@@ -27,6 +28,7 @@ module.exports = {
             colors: {
                 body: '#6e8098',
                 black: '#19202d',
+                dark: '#121721',
                 violet: '#5964e0',
                 'light-violet': '#eeeffc',
                 gray: '#e8e8ea',
@@ -39,6 +41,9 @@ module.exports = {
             },
             gridTemplateColumns: {
                 cards: 'repeat(auto-fill, minmax(300px, 1fr))'
+            },
+            spacing: {
+                header: '160px'
             }
         }
     },

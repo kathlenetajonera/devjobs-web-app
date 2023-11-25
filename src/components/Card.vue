@@ -18,7 +18,7 @@ defineProps<{
 <template>
     <router-link
         :to="{ name: 'Job', params: { id } }"
-        class="relative bg-white p-8 pt-12 rounded-md"
+        class="relative bg-white dark:bg-black transition-[background] p-8 pt-12 rounded-md"
     >
         <div class="absolute top-0 -translate-y-1/2">
             <span

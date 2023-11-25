@@ -18,6 +18,6 @@ const { windowWidth } = useWindowResize();
         :value="text"
         @input="$emit('update:text', ($event.target as HTMLInputElement).value)"
         @keyup.enter="$emit('enter')"
-        class="text-sm text-black placeholder:text-dark-gray flex-1 outline-none bg-transparent px-4 sm:w-full"
+        class="text-sm text-black dark:text-white transition-colors placeholder:text-dark-gray flex-1 outline-none bg-transparent px-4 sm:w-full"
     />
 </template>

@@ -27,7 +27,7 @@ const openInNewTab = (url: string) => window.open(url, '_blank');
 </script>
 
 <template>
-    <div class="bg-light-gray min-h-screen">
+    <div class="bg-light-gray dark:bg-dark transition-[background] min-h-screen">
         <div v-if="jobData">
             <InnerContainer>
                 <div class="h-[140px] flex -translate-y-10 md:h-auto">
@@ -42,7 +42,7 @@ const openInNewTab = (url: string) => window.open(url, '_blank');
                         />
                     </div>
                     <div
-                        class="flex-1 flex items-center justify-between bg-white px-10 rounded-r-md md:flex-col md:p-6 md:pt-12 md:pb-6 md:rounded-md"
+                        class="flex-1 flex items-center justify-between bg-white dark:bg-black transition-[background] px-10 rounded-r-md md:flex-col md:p-6 md:pt-12 md:pb-6 md:rounded-md"
                     >
                         <div class="md:mb-8 md:text-center">
                             <HeadingTwo customClass="mt-0 md:mb-3">
@@ -58,7 +58,7 @@ const openInNewTab = (url: string) => window.open(url, '_blank');
                         />
                     </div>
                 </div>
-                <div class="bg-white p-10 rounded-md md:p-6">
+                <div class="bg-white dark:bg-black transition-[background] p-10 rounded-md md:p-6">
                     <div class="flex">
                         <Paragraph>{{ jobData.postedAt }}</Paragraph>
                         <span class="text-body mx-2">•</span>
@@ -91,7 +91,7 @@ const openInNewTab = (url: string) => window.open(url, '_blank');
                 </div>
             </InnerContainer>
 
-            <div class="bg-white py-6 mt-20">
+            <div class="bg-white dark:bg-black transition-[background] py-6 mt-20">
                 <InnerContainer>
                     <div class="flex items-center justify-between">
                         <div class="md:hidden">

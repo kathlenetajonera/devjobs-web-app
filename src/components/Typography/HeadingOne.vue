@@ -6,7 +6,7 @@ defineProps<{
 <template>
     <h1
         :class="[
-            'text-black text-3xl leading-none font-bold my-4 lg:text-2xl md:text-xl',
+            'text-black dark:text-white transition-colors text-3xl leading-none font-bold my-4 lg:text-2xl md:text-xl',
             customClass || ''
         ]"
     >

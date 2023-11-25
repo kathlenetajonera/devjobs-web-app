@@ -35,7 +35,9 @@ const handleSearch = () => {
 </script>
 
 <template>
-    <div class="bg-white px-6 pr-4 rounded-md flex -translate-y-1/2 h-20 sm:px-4">
+    <div
+        class="bg-white dark:bg-black transition-[background] px-6 pr-4 rounded-md flex -translate-y-1/2 h-20 sm:px-4"
+    >
         <div class="flex-[1.8] flex items-center justify-center xl:flex-1">
             <FilterText v-model:text="keyword" @enter="handleSearch" />
 
@@ -48,7 +50,9 @@ const handleSearch = () => {
                 </ButtonIcon>
             </div>
         </div>
-        <div class="flex-1 flex items-center border-x-[1px] border-x-gray px-6 lg:px-4 md:hidden">
+        <div
+            class="flex-1 flex items-center border-x-[1px] border-x-gray dark:border-x-[#313743] transition-colors px-6 lg:px-4 md:hidden"
+        >
             <FilterLocation :locations="jobLocations" v-model:location="location" />
         </div>
         <div class="flex-1 flex items-center justify-between pl-6 md:hidden">
@@ -66,10 +70,10 @@ const handleSearch = () => {
         <div
             :class="[
                 showFilterModal ? '-translate-y-1/2' : 'translate-y-1',
-                'w-[88%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-md transition-transform'
+                'w-[88%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black transition-[background] rounded-md transition-transform'
             ]"
         >
-            <div class="border-b-[1px] border-b-gray p-6">
+            <div class="border-b-[1px] border-b-gray dark:border-b-[#313743] transition-colors p-6">
                 <FilterLocation :locations="jobLocations" v-model:location="location" />
             </div>
             <div class="p-6">
