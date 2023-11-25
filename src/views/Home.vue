@@ -6,6 +6,7 @@ import Container from '../components/Layout/Container.vue';
 import SearchBar from '../components/SearchBar/SearchBar.vue';
 import Button from '../components/Button.vue';
 import Card from '../components/Card.vue';
+import EmptyPlaceholder from '@/components/EmptyPlaceholder.vue';
 import data from '../assets/data.json';
 
 const jobs = ref(data);
@@ -51,25 +52,30 @@ const filterData = (filters: FiltersType) => {
         <Container>
             <SearchBar :jobLocations="jobLocations" @search="filterData" />
 
-            <div class="grid grid-cols-cards gap-6 gap-y-14 my-14 lg:gap-x-3 md:gap-y-12">
-                <Card
-                    v-for="job in jobsToRender"
-                    :key="job.id"
-                    :id="job.id"
-                    :logo="job.logo"
-                    :logoBackground="job.logoBackground"
-                    :postedAt="job.postedAt"
-                    :contract="job.contract"
-                    :position="job.position"
-                    :company="job.company"
-                    :location="job.location"
-                />
-            </div>
-
-            <div v-if="showLoadMore">
-                <div class="text-center">
-                    <Button label="Load more" :onClick="handleLoadMore" />
+            <div v-if="jobsToRender.length > 0">
+                <div class="grid grid-cols-cards gap-6 gap-y-14 my-14 lg:gap-x-3 md:gap-y-12">
+                    <Card
+                        v-for="job in jobsToRender"
+                        :key="job.id"
+                        :id="job.id"
+                        :logo="job.logo"
+                        :logoBackground="job.logoBackground"
+                        :postedAt="job.postedAt"
+                        :contract="job.contract"
+                        :position="job.position"
+                        :company="job.company"
+                        :location="job.location"
+                    />
                 </div>
+
+                <div v-if="showLoadMore">
+                    <div class="text-center">
+                        <Button label="Load more" :onClick="handleLoadMore" />
+                    </div>
+                </div>
+            </div>
+            <div v-else>
+                <EmptyPlaceholder />
             </div>
         </Container>
     </div>

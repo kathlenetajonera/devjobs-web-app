@@ -38,7 +38,7 @@ module.exports = {
                 header: "url( '/src/assets/patterns/bg-pattern-header-desktop.svg')"
             },
             gridTemplateColumns: {
-                cards: 'repeat(auto-fit, minmax(300px, 1fr))'
+                cards: 'repeat(auto-fill, minmax(300px, 1fr))'
             }
         }
     },
